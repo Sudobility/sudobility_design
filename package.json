@@ -1,7 +1,7 @@
 {
   "name": "sudobility-design",
   "private": true,
-  "version": "0.1.26",
+  "version": "0.1.27",
   "type": "module",
   "scripts": {
     "generate:cf-env": "curl -sL https://raw.githubusercontent.com/johnqh/workflows/main/scripts/generate-cloudflare-env.ts -o /tmp/generate-cloudflare-env.ts && bunx tsx /tmp/generate-cloudflare-env.ts",
@@ -12,7 +12,13 @@
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json}\"",
     "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json}\"",
     "localize": "SCRIPT=$(mktemp) && curl -fsSL https://raw.githubusercontent.com/johnqh/workflows/main/scripts/localize_batch.cjs -o $SCRIPT && WHISPERLY_API_KEY=$(grep -h '^WHISPERLY_API_KEY=' ~/.keys ~/.keys.txt 2>/dev/null | head -1 | cut -d= -f2-) node $SCRIPT ./public/locales https://api.whisperly.dev/api/v1/translate/jie9cytr/starter && rm -f $SCRIPT && prettier . --write",
-    "localized": "node scripts/localization_verify.cjs"
+    "localized": "node scripts/localization_verify.cjs",
+    "process:static": "curl -sL https://raw.githubusercontent.com/johnqh/workflows/main/scripts/process-static-files.ts -o /tmp/process-static-files.ts && bunx tsx /tmp/process-static-files.ts",
+    "seo:fetch": "curl -fsSL https://raw.githubusercontent.com/johnqh/workflows/main/scripts/generate-seo-assets-v2.mjs -o /tmp/generate-seo-assets.mjs",
+    "generate:sitemap": "bun run seo:fetch && node /tmp/generate-seo-assets.mjs public",
+    "prerender": "node scripts/prerender.mjs",
+    "prerender:install": "bunx playwright install --with-deps chromium",
+    "generate": "bun run process:static && bun run generate:sitemap && bun run prerender:install && bun run prerender"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
@@ -66,7 +72,8 @@
     "tailwindcss": "^3.4.0",
     "typescript": "^5.6.0",
     "typescript-eslint": "^8.53.0",
-    "vite": "^6.0.0"
+    "vite": "^6.0.0",
+    "tsx": "^4.21.0"
   },
   "license": "BUSL-1.1"
 }
