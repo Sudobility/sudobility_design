@@ -23,11 +23,11 @@ export default defineConfig({
       ),
       // Stub out optional peer dependencies from @sudobility/building_blocks
       "firebase/auth": resolve(__dirname, "src/stubs/firebase-auth.ts"),
-      "@sudobility/subscription-components": resolve(
+      "@sudobility/components/subscription": resolve(
         __dirname,
         "src/stubs/subscription-components.ts",
       ),
-      "@sudobility/devops-components": resolve(
+      "@sudobility/components/devops": resolve(
         __dirname,
         "src/stubs/devops-components.ts",
       ),
