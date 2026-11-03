@@ -218,7 +218,7 @@ const InputsPage: React.FC<AppProps> = ({ emailDomain, appName: _appName }) => {
               </div>
               <div className={`${ui.background.subtle} rounded-lg p-4`}>
                 <div
-                  className={`${textVariants.heading.h4()} text-accent mb-1`}
+                  className={`${textVariants.heading.h4()} text-warning mb-1`}
                 >
                   4
                 </div>
@@ -227,9 +227,7 @@ const InputsPage: React.FC<AppProps> = ({ emailDomain, appName: _appName }) => {
                 </div>
               </div>
               <div className={`${ui.background.subtle} rounded-lg p-4`}>
-                <div
-                  className={`${textVariants.heading.h4()} text-secondary mb-1`}
-                >
+                <div className={`${textVariants.heading.h4()} text-info mb-1`}>
                   6
                 </div>
                 <div className={textVariants.caption.default()}>

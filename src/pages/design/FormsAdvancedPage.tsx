@@ -269,9 +269,9 @@ const FormsAdvancedPage: React.FC<AppProps> = ({
         <div className="max-w-7xl mx-auto px-4 py-12">
           {/* Header */}
           <div className="mb-12">
-            <div className="inline-flex items-center bg-accent/10 px-4 py-2 rounded-full mb-6">
-              <DocumentTextIcon className="h-5 w-5 text-accent mr-2" />
-              <span className="text-accent font-semibold">
+            <div className="inline-flex items-center bg-primary/10 px-4 py-2 rounded-full mb-6">
+              <DocumentTextIcon className="h-5 w-5 text-primary mr-2" />
+              <span className="text-primary font-semibold">
                 {t("header.badge")}
               </span>
             </div>
@@ -529,7 +529,7 @@ const FormsAdvancedPage: React.FC<AppProps> = ({
                             handleInputChange("network", value)
                           }
                         >
-                          <SelectTrigger className="mt-1 block w-full rounded-md border-input bg-card text-foreground shadow-sm focus:outline-none focus:border-ring focus:ring-ring">
+                          <SelectTrigger className="mt-1 block w-full h-10 px-3 rounded-md border-input bg-card text-foreground shadow-sm focus:outline-none focus:border-ring focus:ring-ring">
                             <SelectValue />
                           </SelectTrigger>
                           <SelectContent>

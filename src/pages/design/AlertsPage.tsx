@@ -174,7 +174,7 @@ const AlertsPage: React.FC<AppProps> = ({ emailDomain, appName: _appName }) => {
               </div>
               <div className={`${ui.background.subtle} rounded-lg p-4`}>
                 <div
-                  className={`${textVariants.heading.h4()} text-accent mb-1`}
+                  className={`${textVariants.heading.h4()} text-warning mb-1`}
                 >
                   6
                 </div>

@@ -82,9 +82,7 @@ const AccessibilityPage: React.FC<AppProps> = ({
                 </div>
               </div>
               <div className={`${ui.background.subtle} rounded-lg p-4`}>
-                <div
-                  className={`${textVariants.heading.h4()} text-accent mb-1`}
-                >
+                <div className={`${textVariants.heading.h4()} text-info mb-1`}>
                   {t("stats.contrast.value")}
                 </div>
                 <div className={textVariants.caption.default()}>
@@ -189,7 +187,7 @@ focus:m-2 focus:no-underline`}
               <CardContent className="pt-6">
                 <div className="flex items-center mb-4">
                   <CursorArrowRaysIcon
-                    className={`${variants.icon.size.lg()} text-accent mr-3`}
+                    className={`${variants.icon.size.lg()} text-primary mr-3`}
                   />
                   <h2 className={textVariants.heading.h3()}>
                     {t("focus.title")}

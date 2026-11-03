@@ -216,9 +216,7 @@ const DesignSystemPage: React.FC<AppProps> = ({ appName }) => {
               </div>
             </div>
             <div className={`${ui.background.subtle} rounded-lg p-4`}>
-              <div
-                className={`${textVariants.heading.h4()} text-secondary mb-1`}
-              >
+              <div className={`${textVariants.heading.h4()} text-info mb-1`}>
                 {Object.keys(designTokens.spacing).length}
               </div>
               <div className={textVariants.caption.default()}>

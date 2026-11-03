@@ -220,9 +220,7 @@ const LoadingStatesPage: React.FC<AppProps> = ({
             {/* Loading Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
               <div className={`${ui.background.subtle} rounded-lg p-4`}>
-                <div
-                  className={`${textVariants.heading.h4()} text-accent mb-1`}
-                >
+                <div className={`${textVariants.heading.h4()} text-info mb-1`}>
                   6
                 </div>
                 <div className={textVariants.caption.default()}>

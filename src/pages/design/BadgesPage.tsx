@@ -78,9 +78,9 @@ const BadgesPage: React.FC<AppProps> = ({ appName }) => {
       <div className="max-w-7xl mx-auto px-4 py-12">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-accent/10 px-4 py-2 rounded-full mb-6">
-            <SparklesIcon className="h-5 w-5 text-accent mr-2" />
-            <span className="text-accent font-semibold">
+          <div className="inline-flex items-center bg-primary/10 px-4 py-2 rounded-full mb-6">
+            <SparklesIcon className="h-5 w-5 text-primary mr-2" />
+            <span className="text-primary font-semibold">
               {t("header.badge")}
             </span>
           </div>
@@ -98,7 +98,7 @@ const BadgesPage: React.FC<AppProps> = ({ appName }) => {
           {/* Badge Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
             <div className={`${ui.background.subtle} rounded-lg p-4`}>
-              <div className={`${textVariants.heading.h4()} text-accent mb-1`}>
+              <div className={`${textVariants.heading.h4()} text-warning mb-1`}>
                 8
               </div>
               <div className={textVariants.caption.default()}>
@@ -122,9 +122,7 @@ const BadgesPage: React.FC<AppProps> = ({ appName }) => {
               </div>
             </div>
             <div className={`${ui.background.subtle} rounded-lg p-4`}>
-              <div
-                className={`${textVariants.heading.h4()} text-secondary mb-1`}
-              >
+              <div className={`${textVariants.heading.h4()} text-info mb-1`}>
                 4
               </div>
               <div className={textVariants.caption.default()}>

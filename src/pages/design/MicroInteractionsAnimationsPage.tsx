@@ -66,9 +66,9 @@ const MicroInteractionsAnimationsPage: React.FC<AppProps> = ({
 
           {/* Header */}
           <div className="text-center mb-12">
-            <div className="inline-flex items-center bg-accent/10 px-4 py-2 rounded-full mb-6">
-              <CursorArrowRippleIcon className="h-5 w-5 text-accent mr-2" />
-              <span className="text-accent font-semibold">
+            <div className="inline-flex items-center bg-primary/10 px-4 py-2 rounded-full mb-6">
+              <CursorArrowRippleIcon className="h-5 w-5 text-primary mr-2" />
+              <span className="text-primary font-semibold">
                 {t("header.badge")}
               </span>
             </div>
@@ -87,7 +87,7 @@ const MicroInteractionsAnimationsPage: React.FC<AppProps> = ({
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
               <div className={`${ui.background.subtle} rounded-lg p-4`}>
                 <div
-                  className={`${textVariants.heading.h4()} text-accent mb-1`}
+                  className={`${textVariants.heading.h4()} text-warning mb-1`}
                 >
                   200+
                 </div>
@@ -116,9 +116,7 @@ const MicroInteractionsAnimationsPage: React.FC<AppProps> = ({
                 </div>
               </div>
               <div className={`${ui.background.subtle} rounded-lg p-4`}>
-                <div
-                  className={`${textVariants.heading.h4()} text-secondary mb-1`}
-                >
+                <div className={`${textVariants.heading.h4()} text-info mb-1`}>
                   Web3
                 </div>
                 <div className={textVariants.caption.default()}>
@@ -134,7 +132,7 @@ const MicroInteractionsAnimationsPage: React.FC<AppProps> = ({
               <CardContent className="pt-6">
                 <div className="flex items-center mb-4">
                   <CursorArrowRippleIcon
-                    className={`${variants.icon.size.lg()} text-accent mr-3`}
+                    className={`${variants.icon.size.lg()} text-primary mr-3`}
                   />
                   <h2 className={textVariants.heading.h3()}>
                     {t("hover.title")}
@@ -305,7 +303,7 @@ variants.animations.loading.progress.bar()`}
             <CardContent className="pt-6">
               <div className="flex items-center mb-4">
                 <SparklesIcon
-                  className={`${variants.icon.size.lg()} text-accent mr-3`}
+                  className={`${variants.icon.size.lg()} text-primary mr-3`}
                 />
                 <h2 className={textVariants.heading.h3()}>{t("web3.title")}</h2>
               </div>

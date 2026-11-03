@@ -127,7 +127,7 @@ const PerformancePage: React.FC<AppProps> = ({
               </div>
               <div className={`${ui.background.subtle} rounded-lg p-4`}>
                 <div
-                  className={`${textVariants.heading.h4()} text-accent mb-1`}
+                  className={`${textVariants.heading.h4()} text-warning mb-1`}
                 >
                   {t("header.stats.web3Batch.value")}
                 </div>
@@ -136,9 +136,7 @@ const PerformancePage: React.FC<AppProps> = ({
                 </div>
               </div>
               <div className={`${ui.background.subtle} rounded-lg p-4`}>
-                <div
-                  className={`${textVariants.heading.h4()} text-secondary mb-1`}
-                >
+                <div className={`${textVariants.heading.h4()} text-info mb-1`}>
                   {t("header.stats.lcpTarget.value")}
                 </div>
                 <div className={textVariants.caption.default()}>
@@ -308,7 +306,7 @@ variants.performance.webVitals.layoutStability.stable()`}
                         </span>{" "}
                         128KB
                       </div>
-                      <div className="p-2 bg-accent/10 rounded">
+                      <div className="p-2 bg-primary/10 rounded">
                         <span className="font-medium">
                           {t("bundle.web3Utils")}
                         </span>{" "}
@@ -332,7 +330,7 @@ variants.performance.webVitals.layoutStability.stable()`}
             <CardContent className="pt-6">
               <div className="flex items-center mb-4">
                 <GlobeAltIcon
-                  className={`${variants.icon.size.lg()} text-accent mr-3`}
+                  className={`${variants.icon.size.lg()} text-primary mr-3`}
                 />
                 <h2 className={textVariants.heading.h3()}>
                   {t("network.title")}
@@ -432,7 +430,7 @@ variants.performance.network.cache.stale()`}
             <CardContent className="pt-6">
               <div className="flex items-center mb-4">
                 <SparklesIcon
-                  className={`${variants.icon.size.lg()} text-accent mr-3`}
+                  className={`${variants.icon.size.lg()} text-primary mr-3`}
                 />
                 <h2 className={textVariants.heading.h3()}>{t("web3.title")}</h2>
               </div>

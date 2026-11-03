@@ -194,9 +194,9 @@ const ModalsPage: React.FC<AppProps> = ({ emailDomain, appName: _appName }) => {
 
           {/* Header */}
           <div className="mb-12">
-            <div className="inline-flex items-center bg-accent/10 px-4 py-2 rounded-full mb-6">
-              <Cog6ToothIcon className="h-5 w-5 text-accent mr-2" />
-              <span className="text-accent font-semibold">
+            <div className="inline-flex items-center bg-primary/10 px-4 py-2 rounded-full mb-6">
+              <Cog6ToothIcon className="h-5 w-5 text-primary mr-2" />
+              <span className="text-primary font-semibold">
                 {t("header.badge")}
               </span>
             </div>
@@ -342,12 +342,12 @@ const ModalsPage: React.FC<AppProps> = ({ emailDomain, appName: _appName }) => {
               >
                 <div className="flex items-center justify-between mb-3">
                   <h3
-                    className={`${textVariants.heading.h4()} group-hover:text-accent transition-colors`}
+                    className={`${textVariants.heading.h4()} group-hover:text-info transition-colors`}
                   >
                     {t("demos.cards.transactionModal.title")}
                   </h3>
-                  <div className="w-8 h-8 bg-accent/10 rounded-full flex items-center justify-center">
-                    <CurrencyDollarIcon className="h-4 w-4 text-accent" />
+                  <div className="w-8 h-8 bg-info/10 rounded-full flex items-center justify-center">
+                    <CurrencyDollarIcon className="h-4 w-4 text-info" />
                   </div>
                 </div>
                 <p
@@ -363,12 +363,12 @@ const ModalsPage: React.FC<AppProps> = ({ emailDomain, appName: _appName }) => {
               >
                 <div className="flex items-center justify-between mb-3">
                   <h3
-                    className={`${textVariants.heading.h4()} group-hover:text-secondary transition-colors`}
+                    className={`${textVariants.heading.h4()} group-hover:text-destructive transition-colors`}
                   >
                     {t("demos.cards.formModal.title")}
                   </h3>
-                  <div className="w-8 h-8 bg-secondary/10 rounded-full flex items-center justify-center">
-                    <Cog6ToothIcon className="h-4 w-4 text-secondary" />
+                  <div className="w-8 h-8 bg-destructive/10 rounded-full flex items-center justify-center">
+                    <Cog6ToothIcon className="h-4 w-4 text-destructive" />
                   </div>
                 </div>
                 <p
@@ -801,8 +801,8 @@ const Modal = ({ children, isOpen }) => {
               </p>
               <div className="space-y-3">
                 <button className="w-full flex items-center gap-3 p-3 border border-border rounded-lg hover:bg-muted transition-colors">
-                  <div className="w-8 h-8 bg-secondary/10 rounded-full flex items-center justify-center">
-                    <WalletIcon className="h-5 w-5 text-secondary" />
+                  <div className="w-8 h-8 bg-info/10 rounded-full flex items-center justify-center">
+                    <WalletIcon className="h-5 w-5 text-info" />
                   </div>
                   <div className="text-left">
                     <div className={textVariants.heading.h5()}>
@@ -831,8 +831,8 @@ const Modal = ({ children, isOpen }) => {
                   </div>
                 </button>
                 <button className="w-full flex items-center gap-3 p-3 border border-border rounded-lg hover:bg-muted transition-colors">
-                  <div className="w-8 h-8 bg-accent/10 rounded-full flex items-center justify-center">
-                    <WalletIcon className="h-5 w-5 text-accent" />
+                  <div className="w-8 h-8 bg-warning/10 rounded-full flex items-center justify-center">
+                    <WalletIcon className="h-5 w-5 text-warning" />
                   </div>
                   <div className="text-left">
                     <div className={textVariants.heading.h5()}>

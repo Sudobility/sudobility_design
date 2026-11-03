@@ -260,9 +260,9 @@ const DataDisplayPage: React.FC<AppProps> = ({
         <div className="max-w-7xl mx-auto px-4 py-12">
           {/* Header */}
           <div className="mb-12">
-            <div className="inline-flex items-center bg-accent/10 px-4 py-2 rounded-full mb-6">
-              <TableCellsIcon className="h-5 w-5 text-accent mr-2" />
-              <span className="text-accent font-semibold">
+            <div className="inline-flex items-center bg-primary/10 px-4 py-2 rounded-full mb-6">
+              <TableCellsIcon className="h-5 w-5 text-primary mr-2" />
+              <span className="text-primary font-semibold">
                 {t("header.badge")}
               </span>
             </div>
