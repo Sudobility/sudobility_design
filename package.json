@@ -1,7 +1,7 @@
 {
   "name": "sudobility-design",
   "private": true,
-  "version": "0.1.36",
+  "version": "0.1.37",
   "type": "module",
   "scripts": {
     "generate:cf-env": "curl -sL https://raw.githubusercontent.com/johnqh/workflows/main/scripts/generate-cloudflare-env.ts -o /tmp/generate-cloudflare-env.ts && bunx tsx /tmp/generate-cloudflare-env.ts",
@@ -29,11 +29,11 @@
     "@radix-ui/react-slot": "~1.5.0",
     "@radix-ui/react-switch": "~1.4.1",
     "@radix-ui/react-tabs": "~1.2.1",
-    "@sudobility/building_blocks": "^0.0.353",
-    "@sudobility/components": "^5.3.54",
+    "@sudobility/building_blocks": "^0.0.356",
+    "@sudobility/components": "^5.3.55",
     "@sudobility/design": "^1.1.68",
     "@sudobility/di": "^1.5.84",
-    "@sudobility/di_web": "^0.1.271",
+    "@sudobility/di_web": "^0.1.272",
     "@sudobility/seo_lib": "^0.0.51",
     "@sudobility/types": "^1.9.78",
     "bs58": "~6.0.0",
