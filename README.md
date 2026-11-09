@@ -10,8 +10,13 @@ Built with React 19 + TypeScript + Vite + Tailwind CSS, on the
 
 ## Commands
 
+The `@sudobility/*` dependencies are published to **GitHub Packages**
+(`.npmrc` points `@sudobility` at `npm.pkg.github.com`), so installing requires
+a GitHub token with `read:packages` exported as `NODE_AUTH_TOKEN` (or configured
+in `~/.npmrc`) before `bun install`.
+
 ```bash
-bun install          # install dependencies
+bun install          # install dependencies (needs GitHub Packages auth, see above)
 bun run dev          # dev server on http://localhost:4000
 bun run build        # type-check + production build (tsc -b && vite build)
 bun run preview      # preview the production build
@@ -32,10 +37,12 @@ bun run format       # Prettier
 
 ## Internationalization
 
-The `/:lang` routing and language selector support 15 languages, but only the
-`en` chrome locale (`public/locales/en/common.json`) is authored. The design
-showcase pages themselves are English-only. Other locales fall back to English
-until their `common.json` files are added.
+The `/:lang` routing and language selector support 15 languages (`src/i18n.ts`):
+`en`, `zh`, `zh-hant`, `ja`, `ko`, `es`, `fr`, `de`, `it`, `pt`, `ru`, `sv`,
+`th`, `uk`, `vi`. All 15 are fully translated — each `public/locales/<lang>/`
+holds `common.json` (chrome) plus one JSON namespace per showcase page. Missing
+keys fall back to `en`. Translations are regenerated with `bun run localize`
+(calls the Whisperly batch-translate workflow) and checked with `bun run localized`.
 
 ## Theming
 
@@ -49,5 +56,15 @@ Two independent systems, both persisted to localStorage under distinct keys:
 
 ## Deployment
 
-Cloudflare Pages (`wrangler.toml`, output `dist/`). Optional Firebase analytics
-via `VITE_FIREBASE_*` env vars (see `.env.example`).
+Cloudflare Pages (`wrangler.toml`, output `dist/`). A Pages Function
+(`functions/_middleware.js`, from `@sudobility/seo_lib/middleware`) injects the
+prerendered SEO snapshots at request time.
+
+`bun run generate` builds the static SEO assets: it processes static files,
+generates `sitemap.xml`/`robots.txt` (`seo.config.mjs`), and prerenders content
+snapshots into `public/html/` by driving the **running** dev server with
+headless Chromium (`scripts/prerender.mjs` — start `bun run dev` first).
+
+App config comes from `VITE_*` env vars (see `.env.example`). The only Firebase
+var is `VITE_FIREBASE_PROXY`, a reverse proxy that keeps Firebase working for
+mainland-China users; leave it blank to use Firebase directly.
